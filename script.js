@@ -12,5 +12,5 @@ function mostrarCarta(tipo) {
 function volver() {
   document.getElementById('visorCarta').classList.remove('visible');
   document.getElementById('menuInicial').classList.add('visible');
-  document.getElementById('pdfviewer').src = '';
+  document.getElementById('pdfviewer').src = " ";
 }

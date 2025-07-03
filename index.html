@@ -4,15 +4,7 @@
   <meta charset="UTF-8">
   <title>Carta del Restaurante</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+      <link rel="stylesheet" href="style.css">
   </style>
 </head>
 <body>
@@ -21,13 +13,13 @@
     <h2>Selecciona una carta</h2>
     <button onclick="mostrarCarta('platos')">Carta de Platos</button>
     <button onclick="mostrarCarta('cocteles')">Carta de Cócteles</button>
-  </div>
+  </div> 
 
   <!-- Vista con selección-->
   <div class="viewer" id="visorCarta">
     <button onclick="back()"
     <iframe id="pdfviewer" src=""> </iframe>
   </div>
-  </body>
+  <script href="script.js"> </script>
 </body>
 </html>
