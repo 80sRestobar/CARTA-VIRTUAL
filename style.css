@@ -1,0 +1,7 @@
+.visible {
+    display:block;
+}
+
+.selector .viewer {
+    display:none
+}

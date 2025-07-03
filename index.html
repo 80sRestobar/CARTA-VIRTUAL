@@ -16,7 +16,18 @@
   </style>
 </head>
 <body>
-  <iframe src="assets/Carta de Cócteles - 80's Restobar.pdf"></iframe>
-  <iframe src="assets/Carta Cocina - 80's Restobar.pdf"></iframe>
+  <!-- Vista sin seleccionar nada-->
+  <div class="selector visible" id="menuInicial">
+    <h2>Selecciona una carta</h2>
+    <button onclick="mostrarCarta('platos')">Carta de Platos</button>
+    <button onclick="mostrarCarta('cocteles')">Carta de Cócteles</button>
+  </div>
+
+  <!-- Vista con selección-->
+  <div class="viewer" id="visorCarta">
+    <button onclick="back()"
+    <iframe id="pdfviewer" src=""> </iframe>
+  </div>
+  </body>
 </body>
 </html>
