@@ -3,14 +3,14 @@ function mostrarCarta(tipo) {
   document.getElementById("visorCarta").classList.add('visible');
 
   if (tipo === "platos") {
-    document.getElementById('pdfviewer').src = "assets/carta-cocina.pdf";
+    document.getElementById('pdfviewer').href = "assets/carta-cocina.pdf";
   } else if (tipo === "cocteles") {
-    document.getElementById('pdfviewer').src = "assets/carta-cocteles.pdf";
+    document.getElementById('pdfviewer').href = "assets/carta-cocteles.pdf";
   }
 }
 
 function back() {
   document.getElementById('visorCarta').classList.remove('visible');
   document.getElementById('menuInicial').classList.add('visible');
-  document.getElementById('pdfviewer').src = "";
+  document.getElementById('pdfviewer').href = "";
 }
