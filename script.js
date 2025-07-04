@@ -9,10 +9,10 @@ function mostrarCarta(tipo) {
   let cantidad = 0;
 
   if (tipo === "platos") {
-    folder = "cartacocina";
+    folder = "carpetacocina";
     cantidad = 8; 
   } else if (tipo === "cocteles") {
-    folder = "cartacocteles";
+    folder = "carpetacocteles";
     cantidad = 7;
   }
 
