@@ -13,13 +13,11 @@
     <button onclick="mostrarCarta('cocteles')">Carta de Cócteles</button>
   </div> 
 
-  <a href="assets/carta-cocina.pdf" target="_blank">Ver carta en otra pestaña</a>
-
-  <!-- Vista con selección-->
-  <div class="viewer" id="visorCarta">
-    <button onclick="back()">Atrás</button>
-    <embed id="pdfviewer" src=""></embed>
+  <div id="visorCarta" class="viewer">
+  <button onclick="back()">Volver</button>
+  <div id="cartaImagenes" class="scroll-container">
+    <!-- Aquí se insertan dinámicamente las imágenes -->
   </div>
-  <script src="script.js"> </script>
-</body>
-</html>
+</div>
+
+  <a href="assets/carta-cocina.pdf" target="_blank">Ver carta en otra pestaña</a>
