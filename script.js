@@ -12,7 +12,7 @@ function mostrarCarta(tipo) {
     folder = "carpetacocina";
     cantidad = 8; 
   } else if (tipo === "cocteles") {
-    folder = "carpetacocteles";
+    folder = "carpetabarra";
     cantidad = 7;
   }
 
