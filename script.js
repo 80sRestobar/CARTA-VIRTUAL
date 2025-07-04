@@ -2,12 +2,27 @@ function mostrarCarta(tipo) {
   document.getElementById("menuInicial").classList.remove('visible');
   document.getElementById("visorCarta").classList.add('visible');
 
+  const contenedor = document.getElementById("cartaImagenes");
+  contenedor.innerHTML = ""; // limpia imágenes anteriores
+
+  let folder = "";
+  let cantidad = 0;
+
   if (tipo === "platos") {
-    document.getElementById('pdfviewer').src = "assets/carta-cocina.pdf";
+    folder = "cartacocina";
+    cantidad = 8; 
   } else if (tipo === "cocteles") {
-    document.getElementById('pdfviewer').src = "assets/carta-cocteles.pdf";
+    folder = "cartacocteles";
+    cantidad = 7;
+  }
+
+  for (let i = 1; i <= cantidad; i++) {
+    const img = document.createElement("img");
+    img.src = `assets/${folder}/${i}.png`;
+    contenedor.appendChild(img);
   }
 }
+
 
 function back() {
   document.getElementById('visorCarta').classList.remove('visible');
