@@ -12,6 +12,10 @@ function mostrarCarta(tipo) {
   pdfviewer.classList.remove("novisible");
   pdfviewer.classList.add("visible");
 
+  document.querySelectorAll(".slider-button").forEach(btn => {
+  btn.classList.remove("novisible");
+});
+
   const contenedor = document.getElementById("cartaImagenes");
   contenedor.innerHTML = "";
 
@@ -49,6 +53,10 @@ function back() {
   pdfviewer.href = "";
   pdfviewer.classList.remove("visible");
   pdfviewer.classList.add("novisible");
+
+  document.querySelectorAll(".slider-button").forEach(btn => {
+  btn.classList.add("novisible");
+});
 
   // Limpia imágenes
   document.getElementById("cartaImagenes").innerHTML = "";
