@@ -11,14 +11,22 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 1rem;
-  padding: 1rem;
-  max-width: 100%;
+  padding: 0; /* Elimina el padding */
+  width: 100vw; /* Asegura 100% del ancho visible */
   height: 100vh;
   scroll-behavior: smooth;
   justify-content: center;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.scroll-container img {
+  flex: 0 0 100vw; /* Esto asegura que cada imagen ocupe toda la pantalla */
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+  scroll-snap-align: center;
+  border-radius: 8px;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -113,11 +121,6 @@ body {
 @media (max-width: 600px) {
   #menuInicial {
     flex-direction: column;
-  }
-
-  .scroll-container img {
-    width: 95vw;
-    padding: 0 10px;
   }
 }
 
