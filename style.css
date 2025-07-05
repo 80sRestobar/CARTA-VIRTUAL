@@ -53,6 +53,57 @@
   right: 10px;
 }
 
+@media (max-width: 600px) {
+  .scroll-container img {
+    padding: 0 10px;
+  }
+
+  .slider-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
 body {
   background-color: red;
+}
+
+#menuInicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+#menuInicial h2 {
+  font-size: 2rem;
+}
+
+#menuInicial button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#menuInicial button:hover {
+  background-color: #555;
+}
+
+/* Diseño móvil */
+@media (max-width: 600px) {
+  #menuInicial {
+    flex-direction: column;
+  }
+
+  #menuInicial button {
+    width: 80%;
+  }
 }
