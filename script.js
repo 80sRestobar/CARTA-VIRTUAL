@@ -1,14 +1,19 @@
 function mostrarCarta(tipo) {
+  // Oculta menú
   document.getElementById("menuInicial").classList.remove('visible');
   document.getElementById("menuInicial").classList.add("novisible");
-  document.getElementById("visorCarta").classList.remove("novisible");
-  document.getElementById("visorCarta").classList.add('visible');
+
+  // Muestra visor
   document.getElementById("visorCarta").classList.remove("novisible");
   document.getElementById("visorCarta").classList.add('visible');
 
+  // Muestra link al PDF
+  const pdfviewer = document.getElementById("pdfLink");
+  pdfviewer.classList.remove("novisible");
+  pdfviewer.classList.add("visible");
+
   const contenedor = document.getElementById("cartaImagenes");
   contenedor.innerHTML = "";
-  const pdfviewer = document.querySelector("a");
 
   let folder = "";
   let cantidad = 0;
@@ -17,7 +22,6 @@ function mostrarCarta(tipo) {
     folder = "carpetacocina";
     cantidad = 8;
     pdfviewer.href = "assets/carta-cocina.pdf";
-
   } else if (tipo === "cocteles") {
     folder = "carpetabarra";
     cantidad = 7;
@@ -29,16 +33,24 @@ function mostrarCarta(tipo) {
     img.src = `assets/${folder}/${i}.png`;
     contenedor.appendChild(img);
   }
-
 }
-
-
 
 function back() {
+  // Oculta visor
   document.getElementById('visorCarta').classList.remove('visible');
   document.getElementById("visorCarta").classList.add('novisible');
+
+  // Muestra menú inicial
   document.getElementById('menuInicial').classList.remove('novisible');
   document.getElementById('menuInicial').classList.add('visible');
-  document.getElementById('pdfviewer').src = "";
-  document.querySelector("a").href = "";
+
+  // Oculta el enlace al PDF
+  const pdfviewer = document.getElementById("pdfLink");
+  pdfviewer.href = "";
+  pdfviewer.classList.remove("visible");
+  pdfviewer.classList.add("novisible");
+
+  // Limpia imágenes
+  document.getElementById("cartaImagenes").innerHTML = "";
 }
+

@@ -9,24 +9,19 @@
 
 <body>
 
-  <!-- Vista del Selector-->
-  <div class="visible" id="menuInicial">
+  <div id="menuInicial" class="visible">
     <h2>Selecciona una carta</h2>
     <button onclick="mostrarCarta('platos')">Carta de Platos</button>
     <button onclick="mostrarCarta('cocteles')">Carta de Cócteles</button>
   </div>
 
-  <a href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
+  <!-- Link para abrir PDF -->
+  <a id="pdfLink" href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
 
-  <!--Vista del Visor-->
   <div id="visorCarta" class="novisible">
     <button onclick="back()">Volver</button>
-    <div id="cartaImagenes" class="scroll-container">
-      <!-- Aquí se insertan dinámicamente las imágenes -->
-    </div>
+    <div id="cartaImagenes" class="scroll-container"></div>
   </div>
-
-
 
   <script src="script.js"></script>
 </body>
