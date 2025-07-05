@@ -10,10 +10,29 @@
   max-height: 100vh;
   overflow-y: auto;
   padding: 1rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  height: 100vh;
+}
 }
 
 .scroll-container img {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 8px;
+  flex: 0 0 auto;
+  width: auto;
+  height: 90vh; /* o el alto que gustes */
+  border-radius: 8px;
+  scroll-snap-align: center;
+
+
+}
+
+body {
+  background-color: red;
 }
