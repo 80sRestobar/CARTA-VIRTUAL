@@ -37,6 +37,8 @@ function mostrarCarta(tipo) {
     img.src = `assets/${folder}/${i}.png`;
     contenedor.appendChild(img);
   }
+
+   contenedor.scrollLeft = 0;
 }
 
 function back() {
