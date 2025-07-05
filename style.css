@@ -102,6 +102,12 @@ body {
   background-color: #555;
 }
 
+#visorCarta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Diseño móvil */
 @media (max-width: 600px) {
   #menuInicial {
@@ -117,4 +123,20 @@ body {
   }
 }
 
+#botonAtras {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  margin: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#botonAtras:hover {
+  background-color: #555;
+}
 
