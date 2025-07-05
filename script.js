@@ -12,9 +12,10 @@ function mostrarCarta(tipo) {
   pdfviewer.classList.remove("novisible");
   pdfviewer.classList.add("visible");
 
+  // Muestra botones del slider
   document.querySelectorAll(".slider-button").forEach(btn => {
-  btn.classList.remove("novisible");
-});
+    btn.classList.remove("novisible");
+  });
 
   const contenedor = document.getElementById("cartaImagenes");
   contenedor.innerHTML = "";
@@ -32,14 +33,25 @@ function mostrarCarta(tipo) {
     pdfviewer.href = "assets/carta-cocteles.pdf";
   }
 
+  let cargadas = 0;
+
   for (let i = 1; i <= cantidad; i++) {
     const img = document.createElement("img");
     img.src = `assets/${folder}/${i}.png`;
+
+    // Espera que cada imagen cargue
+    img.onload = () => {
+      cargadas++;
+      if (cargadas === cantidad) {
+        // Solo cuando todas cargaron, reseteamos el scroll
+        contenedor.scrollLeft = 0;
+      }
+    };
+
     contenedor.appendChild(img);
   }
-
-   contenedor.scrollLeft = 0;
 }
+
 
 function back() {
   // Oculta visor
