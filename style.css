@@ -2,12 +2,6 @@
   display: block;
 }
 
-#visorCarta.visible {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .novisible {
   display: none;
 }
@@ -25,6 +19,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -52,23 +47,20 @@
   z-index: 10;
   border-radius: 8px;
 }
+
 .slider-button.left {
   left: 10px;
 }
+
 .slider-button.right {
   right: 10px;
 }
 
-@media (max-width: 600px) {
-  .scroll-container img {
-    padding: 0 10px;
-  }
-
-  .slider-button {
-    font-size: 1.2rem;
-    padding: 0.6rem 0.8rem;
-  }
+.slider-button {
+  font-size: 1.2rem;
+  padding: 0.6rem 0.8rem;
 }
+
 
 body {
   background-color: red;
@@ -79,7 +71,8 @@ body {
 }
 
 #menuInicial {
-  display: none; /* por defecto oculto, hasta que se le agregue la clase visible */
+  display: none;
+  /* por defecto oculto, hasta que se le agregue la clase visible */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -122,11 +115,12 @@ body {
 
   .scroll-container img {
     width: 95vw;
+    padding: 0 10px;
   }
+}
 
-  #menuInicial button {
-    width: 80%;
-  }
+#menuInicial button {
+  width: 80%;
 }
 
 #botonAtras {
@@ -145,4 +139,3 @@ body {
 #botonAtras:hover {
   background-color: #555;
 }
-
