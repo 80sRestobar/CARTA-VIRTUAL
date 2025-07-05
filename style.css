@@ -24,9 +24,9 @@
   width: 100vw;
   height: auto;
   object-fit: contain;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   border-radius: 8px;
-  flex: 0 0 100vw;
+  flex: 0 0 100%;
 }
 
 
