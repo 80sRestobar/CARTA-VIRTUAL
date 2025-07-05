@@ -68,8 +68,12 @@ body {
   background-color: red;
 }
 
-#menuInicial {
+#menuInicial.visible {
   display: flex;
+}
+
+#menuInicial {
+  display: none; /* por defecto oculto, hasta que se le agregue la clase visible */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -77,6 +81,7 @@ body {
   text-align: center;
   gap: 1.5rem;
 }
+
 
 #menuInicial h2 {
   font-size: 2rem;
