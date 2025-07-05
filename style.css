@@ -1,5 +1,11 @@
 .visible {
+  display: block;
+}
+
+#visorCarta.visible {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .novisible {
