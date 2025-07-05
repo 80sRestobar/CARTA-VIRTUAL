@@ -141,3 +141,7 @@ body {
 #botonAtras:hover {
   background-color: #555;
 }
+
+body, html {
+  overflow-x: hidden;
+}
