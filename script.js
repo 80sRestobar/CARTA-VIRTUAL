@@ -30,6 +30,8 @@ function mostrarCarta(tipo) {
     contenedor.appendChild(img);
   }
 
+}
+
 
 
 function back() {
