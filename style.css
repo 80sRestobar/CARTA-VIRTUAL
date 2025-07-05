@@ -108,7 +108,13 @@ body {
     flex-direction: column;
   }
 
+  .scroll-container img {
+    width: 95vw;
+  }
+
   #menuInicial button {
     width: 80%;
   }
 }
+
+
