@@ -18,7 +18,6 @@
   max-width: 100%;
   height: 100vh;
 }
-}
 
 .scroll-container img {
   width: 100%;
@@ -29,8 +28,6 @@
   height: 90vh; /* o el alto que gustes */
   border-radius: 8px;
   scroll-snap-align: center;
-
-
 }
 
 body {
