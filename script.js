@@ -54,3 +54,10 @@ function back() {
   document.getElementById("cartaImagenes").innerHTML = "";
 }
 
+function scrollSlider(direction) {
+  const container = document.getElementById("cartaImagenes");
+  const scrollAmount = container.clientWidth;
+  container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+}
+
+
