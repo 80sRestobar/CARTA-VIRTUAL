@@ -7,6 +7,9 @@ function mostrarCarta(tipo) {
   document.getElementById("visorCarta").classList.remove("novisible");
   document.getElementById("visorCarta").classList.add('visible');
 
+  // Muestra botón "Volver"
+  document.getElementById("botonAtras").classList.remove("novisible");
+
   // Muestra link al PDF
   const pdfviewer = document.getElementById("pdfLink");
   pdfviewer.classList.remove("novisible");
@@ -54,11 +57,13 @@ function mostrarCarta(tipo) {
 }
 
 
-
 function back() {
   // Oculta visor
   document.getElementById('visorCarta').classList.remove('visible');
   document.getElementById("visorCarta").classList.add('novisible');
+
+  // Oculta botón "Volver"
+  document.getElementById("botonAtras").classList.add("novisible");
 
   // Muestra menú inicial
   document.getElementById('menuInicial').classList.remove('novisible');
@@ -70,9 +75,10 @@ function back() {
   pdfviewer.classList.remove("visible");
   pdfviewer.classList.add("novisible");
 
+  // Oculta botones del slider
   document.querySelectorAll(".slider-button").forEach(btn => {
-  btn.classList.add("novisible");
-});
+    btn.classList.add("novisible");
+  });
 
   // Limpia imágenes
   document.getElementById("cartaImagenes").innerHTML = "";
@@ -83,5 +89,6 @@ function scrollSlider(direction) {
   const scrollAmount = container.clientWidth;
   container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
 }
+
 
 

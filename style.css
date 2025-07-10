@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'HEAVITAS';
+  src: url('fonts/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DISCHOUSE';
+  src: url('fonts/DISCHOUSE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .visible {
   display: block;
 }
 
 .novisible {
-  display: none;
+  display: none !important;
 }
 
 .scroll-container {
@@ -11,7 +25,8 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
   max-width: 100%;
   height: 100vh;
   scroll-behavior: smooth;
@@ -21,7 +36,7 @@
 
 
 .scroll-container img {
-  width: 100vw;
+  width: calc(100vw - 2rem);;
   height: auto;
   object-fit: contain;
   scroll-snap-align: start;
@@ -64,10 +79,6 @@
 }
 
 
-body {
-  background-color: red;
-}
-
 #menuInicial.visible {
   display: flex;
 }
@@ -85,7 +96,8 @@ body {
 
 
 #menuInicial h2 {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-family: 'DISCHOUSE';
 }
 
 #menuInicial button {
@@ -118,6 +130,7 @@ body {
 
 #menuInicial button {
   width: 80%;
+  font-family: 'HEAVITAS'
 }
 
 #botonAtras {
@@ -137,8 +150,48 @@ body {
   background-color: #555;
 }
 
-body, html {
+.navbar {
+  width: 100%;
+  background-color: #050505;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #008ff5;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  padding-top: 60px; /* espacio para navbar */
+  background-color: rgb(255, 17, 17);
 }
+

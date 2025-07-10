@@ -9,14 +9,20 @@
 
 <body>
 
+  <nav class="navbar">
+  <div class="nav-logo">80's Restobar</div>
+  <ul class="nav-links">
+    <li><a href="#menuInicial">Inicio</a></li>
+    <li><a href="#visorCarta">Carta</a></li>
+    <li><a href="#pdfLink">PDF</a></li>
+  </ul>
+</nav>
+
   <div id="menuInicial" class="visible">
     <h2>Selecciona una carta</h2>
     <button onclick="mostrarCarta('platos')" class='buttonselector'>Carta de Platos</button>
     <button onclick="mostrarCarta('cocteles')" class='buttonselector'>Carta de Cócteles</button>
   </div>
-
-  <!-- Link para abrir PDF -->
-  <a id="pdfLink" href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
 
   <div id="visorCarta" class="novisible">
     <button onclick="back()" id="botonAtras">Volver</button>
@@ -24,6 +30,9 @@
     <button class="slider-button right novisible" onclick="scrollSlider(1)">❯</button>
     <div id="cartaImagenes" class="scroll-container"></div>
   </div>
+
+    <!-- Link para abrir PDF -->
+  <a id="pdfLink" href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
 
   <script src="script.js"></script>
 </body>
