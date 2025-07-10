@@ -20,34 +20,45 @@
   display: none !important;
 }
 
+/* Contenedor principal del visor */
+#visorCarta {
+  width: 100vw;    /* Asegura que ocupe toda la pantalla */
+  height: 100dvh;  /* Altura completa visible */
+  overflow: hidden;/* Sin scroll vertical ni lateral en el padre */
+  position: relative;
+}
+
 .scroll-container {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  max-width: 100%;
-  height: 100vh;
   scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+  gap: 0;        /* quitamos gap para controlar con márgenes en la imagen */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-
-.scroll-container img {
-  width: calc(100vw - 2rem);;
-  height: auto;
-  object-fit: contain;
-  scroll-snap-align: start;
-  border-radius: 8px;
-  flex: 0 0 100%;
-}
-
-
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
+
+.scroll-container img {
+  /* Dejamos 1rem de margen a cada lado: */
+  margin: 0 1rem;
+  /* Ancho = 100% del viewport menos los márgenes laterales: */
+  flex: 0 0 calc(100vw - 2rem);
+  width: calc(100vw - 2rem);
+  height: 100vh;
+  object-fit: contain;
+  scroll-snap-align: center;
+  display: block;
+}
+
 
 
 /* Botones */
