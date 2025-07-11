@@ -20,11 +20,16 @@
   display: none !important;
 }
 
-/* Contenedor principal del visor */
+
 #visorCarta {
-  width: 100vw;    /* Asegura que ocupe toda la pantalla */
-  height: 100dvh;  /* Altura completa visible */
-  overflow: hidden;/* Sin scroll vertical ni lateral en el padre */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -34,8 +39,9 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   width: 100vw;
-  height: 100vh;
-  gap: 0;        /* quitamos gap para controlar con márgenes en la imagen */
+  flex: 1;
+  gap: 0;
+  /* quitamos gap para controlar con márgenes en la imagen */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -43,6 +49,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -50,16 +57,15 @@
 .scroll-container img {
   /* Dejamos 1rem de margen a cada lado: */
   margin: 0 1rem;
-  /* Ancho = 100% del viewport menos los márgenes laterales: */
+  /* Ancho igual al viewport menos márgenes: */
   flex: 0 0 calc(100vw - 2rem);
   width: calc(100vw - 2rem);
-  height: 100vh;
+  /* altura automática para mantener proporción */
+  height: auto;
   object-fit: contain;
   scroll-snap-align: center;
   display: block;
 }
-
-
 
 /* Botones */
 .slider-button {
@@ -126,11 +132,6 @@
   background-color: #555;
 }
 
-#visorCarta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /* Diseño móvil */
 @media (max-width: 600px) {
@@ -146,15 +147,38 @@
 
 #botonAtras {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  margin: 1rem;
+  padding: 1.5rem;
+  font-size: 3rem;
+  margin: 0 0 1.5rem 0;
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 60px;
   cursor: pointer;
   z-index: 5;
+  font-family: 'HEAVITAS';
+}
+
+@media (max-width: 600px) {
+
+  /* Ajustamos el botón Volver en móvil */
+  #botonAtras {
+    margin-top: 0.3rem;
+    /* menos espacio sobre el botón */
+    margin-bottom: 0.3rem;
+    /* menos espacio debajo */
+    padding: 1rem 1.5rem;
+    /* más área de toque */
+    font-size: 1.2rem;
+    /* texto más grande */
+    width: auto;
+    /* no forzamos ancho fijo */
+  }
+
+  /* Si el scroll-container tiene margen arriba, quítalo */
+  #visorCarta .scroll-container {
+    margin-top: 0;
+  }
 }
 
 #botonAtras:hover {
@@ -198,11 +222,12 @@
   color: #008ff5;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  padding-top: 60px; /* espacio para navbar */
+  padding-top: 60px;
+  /* espacio para navbar */
   background-color: rgb(255, 17, 17);
 }
-
