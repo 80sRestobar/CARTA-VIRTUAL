@@ -5,34 +5,35 @@
   <meta charset="UTF-8">
   <title>Carta del Restaurante</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
   <nav class="navbar">
-  <div class="nav-logo">80's Restobar</div>
-  <ul class="nav-links">
-    <li><a href="#menuInicial">Inicio</a></li>
-    <li><a href="#visorCarta">Carta</a></li>
-    <li><a href="#pdfLink">PDF</a></li>
-  </ul>
-</nav>
+    <div class="nav-logo">80's Resto Bar</div>
+    <a href="https://wa.me/51915956543" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i> Contáctanos
+    </a>
+  </nav>
 
-  <div id="menuInicial" class="visible">
-    <h2>Selecciona una carta</h2>
-    <button onclick="mostrarCarta('platos')" class='buttonselector'>Carta de Platos</button>
-    <button onclick="mostrarCarta('cocteles')" class='buttonselector'>Carta de Cócteles</button>
-  </div>
+  <main id="contenidoCentral">
+    <div id="menuInicial" class="visible">
+      <h2>SELECCIONA UNA CARTA</h2>
+      <div id="botonera">
+        <button onclick="mostrarCarta('platos')" class='buttonselector'>Carta de Platos</button>
+        <button onclick="mostrarCarta('cocteles')" class='buttonselector'>Carta de Cócteles</button>
+      </div>
+    </div>
 
-  <div id="visorCarta" class="novisible">
-    <button onclick="back()" id="botonAtras">Volver</button>
-    <button class="slider-button left novisible" onclick="scrollSlider(-1)">❮</button>
-    <button class="slider-button right novisible" onclick="scrollSlider(1)">❯</button>
-    <div id="cartaImagenes" class="scroll-container"></div>
-  </div>
-
-    <!-- Link para abrir PDF -->
-  <a id="pdfLink" href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
+    <div id="visorCarta" class="novisible">
+      <button onclick="back()" id="botonAtras">Volver</button>
+      <button class="slider-button left novisible" onclick="scrollSlider(-1)">❮</button>
+      <button class="slider-button right novisible" onclick="scrollSlider(1)">❯</button>
+      <div id="cartaImagenes" class="scroll-container"></div>
+        <a id="pdfLink" href="" target="_blank" class="novisible">Ver carta en otra pestaña</a>
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
