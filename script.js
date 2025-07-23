@@ -30,11 +30,11 @@ function mostrarCarta(tipo) {
   if (tipo === "platos") {
     folder = "carpetacocina";
     cantidad = 8;
-    pdfviewer.href = "assets/carta-cocina.pdf";
+    pdfviewer.href = "assets/carta-cocina-tr.pdf";
   } else if (tipo === "cocteles") {
     folder = "carpetabarra";
-    cantidad = 7;
-    pdfviewer.href = "assets/carta-cocteles.pdf";
+    cantidad = 8;
+    pdfviewer.href = "assets/carta-cocteles-tr.pdf";
   }
 
   // Espera a que se carguen todas las imágenes antes de hacer scroll
@@ -42,7 +42,7 @@ function mostrarCarta(tipo) {
 
   for (let i = 1; i <= cantidad; i++) {
     const img = document.createElement("img");
-    img.src = `assets/${folder}/${i}.png`;
+    img.src = `assets/${folder}/${i}.jpg`;
 
     img.onload = () => {
       loadedImages++;
